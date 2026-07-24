@@ -15,8 +15,8 @@ jobs:
         with:
           python-version: '3.12.7'
 
-      - name: Install MLflow
-        run: pip install mlflow==2.19.0 virtualenv
+      - name: Install Dependencies
+        run: pip install mlflow==2.19.0 pandas scikit-learn
 
       - name: Run MLProject
-        run: mlflow run MLProject --no-conda
+        run: mlflow run MLProject --env-manager=local
